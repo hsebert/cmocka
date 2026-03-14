@@ -66,8 +66,9 @@ static void prestate_test(void **state)
     assert_int_equal(*a, 42);
 }
 
+int prestate = 42;
+
 int main(void) {
-    int prestate = 42;
     const struct CMUnitTest tests[] = {
         cmocka_unit_test_setup(malloc_setup_test, setup_only),
         cmocka_unit_test_setup(malloc_setup_test, setup_only),
